@@ -3,19 +3,19 @@ const Navbar = () => {
   return (
     <div className="topbar">
       <div className="options" id="navbarList">
-        <a className="btn" href="https://mominarizwan.com/">
+        <a className="btn" href="/">
           about me
         </a>
-        <a className="btn" href="https://mominarizwan.com/repositories/">
+        <a className="btn" href="/repositories">
           repositories
         </a>
-        <a className="btn" href="https://mominarizwan.com/publications/">
+        <a className="btn" href="/publications">
           publications
         </a>
-        <a className="btn" href="https://mominarizwan.com/resume/">
+        <a className="btn" href="/resume">
           resume
         </a>
-        <a className="btn" href="https://mominarizwan.com/teachings/">
+        <a className="btn" href="/teachings">
           teachings
         </a>
       </div>
