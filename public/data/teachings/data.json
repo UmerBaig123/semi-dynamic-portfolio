@@ -1,0 +1,68 @@
+{
+  "rows": [
+    {
+      "year": 2023,
+      "course": "CS101",
+      "title": "Introduction to Computer Science",
+      "description": "An introduction to the fundamental concepts of computer science.",
+      "instructor": "Dr. Smith",
+      "location": "Room 101",
+      "time": "MWF 10:00-11:00 AM"
+    },
+    {
+      "year": 2023,
+      "course": "CS102",
+      "title": "Data Structures",
+      "description": "An in-depth study of data structures and algorithms.",
+      "instructor": "Prof. Johnson",
+      "location": "Room 102",
+      "time": "TTh 1:00-2:30 PM"
+    },
+
+    {
+      "year": 2023,
+      "course": "CS103",
+      "title": "Web Development",
+      "description": "Learn how to build dynamic websites using HTML, CSS, and JavaScript.",
+      "instructor": "Dr. Lee",
+      "location": "Room 103",
+      "time": "MWF 2:00-3:00 PM"
+    },
+    {
+      "year": 2023,
+      "course": "CS104",
+      "title": "Database Systems",
+      "description": "An introduction to database design and SQL.",
+      "instructor": "Prof. Brown",
+      "location": "Room 104",
+      "time": "TTh 3:00-4:30 PM"
+    },
+    {
+      "year": 2023,
+      "course": "CS105",
+      "title": "Operating Systems",
+      "description": "An overview of operating system concepts and design.",
+      "instructor": "Dr. Wilson",
+      "location": "Room 105",
+      "time": "MWF 11:00-12:00 PM"
+    },
+    {
+      "year": 2023,
+      "course": "CS106",
+      "title": "Software Engineering",
+      "description": "Principles of software engineering and project management.",
+      "instructor": "Prof. Taylor",
+      "location": "Room 106",
+      "time": "TTh 9:00-10:30 AM"
+    }
+  ],
+  "columns": [
+    "year",
+    "course",
+    "title",
+    "description",
+    "instructor",
+    "location",
+    "time"
+  ]
+}
