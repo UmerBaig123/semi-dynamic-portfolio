@@ -1,0 +1,19 @@
+{
+  "github_username": "umerbaig123",
+  "theme": {
+    "light": {
+      "background_color": "#ffffff",
+      "text_color": "#000000",
+      "news_hover_color": "#00000083",
+      "news_hover_back_color": "#00000025",
+      "navbar_bg": "#ffffff"
+    },
+    "dark": {
+      "background_color": "#141414",
+      "text_color": "#ffffff",
+      "news_hover_color": "#ffffff83",
+      "news_hover_back_color": "#ffffff25",
+      "navbar_bg": "#1e1e1e"
+    }
+  }
+}
