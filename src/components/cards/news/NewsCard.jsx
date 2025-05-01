@@ -1,11 +1,7 @@
 import "./NewsCard.css";
 const NewsCard = ({ news }) => {
   return (
-    <a
-      className="news-card"
-      id="1-container"
-      href="https://mominarizwan.com/news/1/"
-    >
+    <a className="news-card" id="1-container" href={`/viewNews/${news.id}`}>
       <div className="news-container">
         <div className="news-left">
           <img
