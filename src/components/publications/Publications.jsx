@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PublicationCard from "../cards/publication/PublicationCard";
-
+import { routeAppend } from "../../RouteAppend";
 const Publications = ({ isMain }) => {
   const [publications, setPublications] = useState([]);
   useEffect(() => {
@@ -8,7 +8,7 @@ const Publications = ({ isMain }) => {
     if (isMain) {
       url = "/data/publications/main/data.json";
     }
-    fetch(url)
+    fetch(routeAppend + url)
       .then((response) => response.json())
       .then((data) => {
         setPublications(data);

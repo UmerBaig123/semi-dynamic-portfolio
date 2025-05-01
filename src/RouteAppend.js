@@ -1,1 +1,1 @@
-export const routeAppend = "semi-dynamic-portfolio/";
+export const routeAppend = "/semi-dynamic-portfolio/";

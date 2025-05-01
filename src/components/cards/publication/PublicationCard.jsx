@@ -1,4 +1,5 @@
 import "./PublicationCard.css";
+import { routeAppend } from "../../../RouteAppend";
 const PublicationCard = ({ publication }) => {
   return (
     <div className="pCard paralell publ">
@@ -10,7 +11,11 @@ const PublicationCard = ({ publication }) => {
           <div className="pAuthors">{publication.authors}</div>
           <div className="publicationDesc">{publication.desc}</div>
           <div className="links">
-            <a className="link" href={publication.pdf_link} target="_blank">
+            <a
+              className="link"
+              href={routeAppend + publication.pdf_link}
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
