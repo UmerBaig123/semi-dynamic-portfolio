@@ -10,7 +10,7 @@ const GithubCard = ({ username, repoName }) => {
       className="ppAnchor"
     >
       <img
-        src={`https://github-readme-stats.vercel.app/api/pin?username=${username}&repo=${repoName}&theme=${
+        src={`https://github-readme-stats.vercel.app/api/pin?username=${username}&repo=${repoName}&user=${username}&theme=${
           isDarkMode ? "dark" : "light"
         }&show_owner=true`}
         alt="repo logo"
