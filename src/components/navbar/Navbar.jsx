@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import "./Navbar.css";
 import { ThemeContext } from "../../ThemeContextProvider";
+import { routeAppend } from "../../RouteAppend";
 const Navbar = () => {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
   function updateCSSVariables(variables) {
@@ -15,7 +16,7 @@ const Navbar = () => {
 
   useEffect(() => {
     let key = isDarkMode ? "dark" : "light";
-    fetch("/data/general.json")
+    fetch(routeAppend + "/data/general.json")
       .then((response) => response.json())
       .then((data) => {
         const theme = data.theme[key];
@@ -29,19 +30,19 @@ const Navbar = () => {
   return (
     <div className="topbar">
       <div className="options" id="navbarList">
-        <a className="btn" href="/">
+        <a className="btn" href={routeAppend + "/#/"}>
           about me
         </a>
-        <a className="btn" href="/repositories">
+        <a className="btn" href={routeAppend + "/#/repositories"}>
           repositories
         </a>
-        <a className="btn" href="/publications">
+        <a className="btn" href={routeAppend + "/#/publications"}>
           publications
         </a>
-        <a className="btn" href="/resume">
+        <a className="btn" href={routeAppend + "/#/resume"}>
           resume
         </a>
-        <a className="btn" href="/teachings">
+        <a className="btn" href={routeAppend + "/#/teachings"}>
           teachings
         </a>
       </div>

@@ -4,6 +4,7 @@ import { AgGridReact } from "ag-grid-react";
 import { useContext, useEffect, useState } from "react";
 import { themeBalham } from "ag-grid-community";
 import "./TeachingsPage.css";
+import { routeAppend } from "./RouteAppend";
 import { ThemeContext } from "./ThemeContextProvider";
 ModuleRegistry.registerModules([AllCommunityModule]);
 const TeachingsPage = () => {
@@ -26,7 +27,7 @@ const TeachingsPage = () => {
   });
   const [colDefs, setColDefs] = useState([]);
   useEffect(() => {
-    fetch("/data/teachings/data.json")
+    fetch(routeAppend + "/data/teachings/data.json")
       .then((response) => response.json())
       .then((data) => {
         setRowData(data.rows);

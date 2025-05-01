@@ -1,11 +1,16 @@
 import "./NewsCard.css";
+import { routeAppend } from "../../../RouteAppend";
 const NewsCard = ({ news }) => {
   return (
-    <a className="news-card" id="1-container" href={`/viewNews/${news.id}`}>
+    <a
+      className="news-card"
+      id="1-container"
+      href={routeAppend + `/#/viewNews/${news.id}`}
+    >
       <div className="news-container">
         <div className="news-left">
           <img
-            src={news.image}
+            src={routeAppend + news.image}
             style={{
               backgroundSize: "cover",
               backgroundPosition: "center",

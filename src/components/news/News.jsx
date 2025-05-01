@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NewsCard from "../cards/news/NewsCard";
 import "./News.css";
+import { routeAppend } from "../../RouteAppend";
 const News = ({ isMain }) => {
   const [news, setNews] = useState([]);
   useEffect(() => {
@@ -8,7 +9,7 @@ const News = ({ isMain }) => {
     if (isMain) {
       url = "/data/news/main/data.json";
     }
-    fetch(url)
+    fetch(routeAppend + url)
       .then((response) => response.json())
       .then((data) => {
         setNews(data);

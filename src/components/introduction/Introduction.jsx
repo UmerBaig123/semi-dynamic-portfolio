@@ -1,10 +1,11 @@
 import "./Introduction.css";
 import { useState, useEffect } from "react";
 import DOMPurify from "dompurify";
+import { routeAppend } from "../../RouteAppend";
 const Introduction = () => {
   const [userdata, setUserdata] = useState({});
   useEffect(() => {
-    fetch("/data/intro/data.json")
+    fetch(routeAppend + "/data/intro/data.json")
       .then((response) => response.json())
       .then((data) => {
         console.log("Fetched data:", DOMPurify.sanitize(data.summary));
@@ -97,7 +98,7 @@ const Introduction = () => {
 
       <div className="picture-container">
         <div className="pic-container">
-          <img className="profile-pic" src="/profilepic.jpeg" />
+          <img className="profile-pic" src={routeAppend + "/profilepic.jpeg"} />
         </div>
       </div>
     </div>

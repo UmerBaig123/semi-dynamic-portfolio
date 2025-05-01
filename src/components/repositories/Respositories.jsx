@@ -1,12 +1,12 @@
 import { useState } from "react";
 import GithubCard from "../cards/github/GithubCard";
 import { useEffect } from "react";
-
+import { routeAppend } from "../../RouteAppend";
 const Repositories = ({ isMain }) => {
   const [githubUsername, setGithubUsername] = useState("");
   const [githubRepoNames, setGithubRepoNames] = useState([]);
   useEffect(() => {
-    fetch("/data/general.json")
+    fetch(routeAppend + "/data/general.json")
       .then((response) => response.json())
       .then((data) => {
         setGithubUsername(data.github_username);
@@ -19,7 +19,7 @@ const Repositories = ({ isMain }) => {
     if (isMain) {
       repo_url = "/data/github/repositories/main/data.json";
     }
-    fetch(repo_url)
+    fetch(routeAppend + repo_url)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

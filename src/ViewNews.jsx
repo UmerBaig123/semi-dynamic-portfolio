@@ -2,11 +2,12 @@ import { useParams } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import { useEffect, useState } from "react";
 import "./ViewNews.css";
+import { routeAppend } from "./RouteAppend";
 const ViewNews = () => {
   const { news_id } = useParams();
   const [news, setNews] = useState(null);
   useEffect(() => {
-    fetch("/data/news/data.json")
+    fetch(routeAppend + "/data/news/data.json")
       .then((response) => response.json())
       .then((data) => {
         const news = data.find((item) => item.id === parseInt(news_id));
@@ -36,7 +37,7 @@ const ViewNews = () => {
               maxWidth: "90%",
               boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.507)",
             }}
-            src={news.image}
+            src={routeAppend + news.image}
             alt="news image"
           />
         </div>
@@ -52,7 +53,7 @@ const ViewNews = () => {
         </div>
         <div className="header">
           <iframe
-            src={news.pdf}
+            src={routeAppend + news.pdf}
             width="100%"
             height="565px"
             frameBorder="0"
