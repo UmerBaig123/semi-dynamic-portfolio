@@ -5,14 +5,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutPage from "./AboutPage.jsx";
 import PublicationsPage from "./PublicationsPage.jsx";
 import "./index.css";
+import ResumePage from "./ResumePage.jsx";
+import TeachingsPage from "./TeachingsPage.jsx";
+import ReposPage from "./ReposPage.jsx";
 import { ThemeProvider } from "./ThemeContextProvider.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<AboutPage />} />
-      <Route path="/publications" element={<PublicationsPage />} />
-    </Routes>
-  </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AboutPage />} />
+        <Route path="/publications" element={<PublicationsPage />} />
+        <Route path="/resume" element={<ResumePage />} />
+        <Route path="/teachings" element={<TeachingsPage />} />
+        <Route path="/repositories" element={<ReposPage />} />
+      </Routes>
+    </BrowserRouter>
   </ThemeProvider>
 );
