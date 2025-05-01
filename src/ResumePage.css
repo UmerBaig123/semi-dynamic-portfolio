@@ -1,0 +1,9 @@
+.resume-container {
+  max-height: 100vh;
+  overflow: hidden;
+}
+.resume-frame {
+  margin-top: 80px;
+  height: 88vh;
+  width: 100vw;
+}
