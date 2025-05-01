@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 import AboutPage from "./AboutPage.jsx";
 import PublicationsPage from "./PublicationsPage.jsx";
@@ -13,7 +13,7 @@ import ViewNews from "./ViewNews.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<AboutPage />} />
         <Route path="/publications" element={<PublicationsPage />} />
@@ -22,6 +22,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/repositories" element={<ReposPage />} />
         <Route path="/viewNews/:news_id" element={<ViewNews />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </ThemeProvider>
 );
