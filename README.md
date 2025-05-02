@@ -1,12 +1,36 @@
-# React + Vite
+# Semi-Dynamic portfolio to be hosted on Github Pages
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to set up and run?
 
-Currently, two official plugins are available:
+To set up you firt need to clone this repo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- run `git clone https://github.com/UmerBaig123/semi-dynamic-portfolio.git`
+  Now install dependencies
+- run `npm install`
 
-## Expanding the ESLint configuration
+## How to run locally?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+After setting up, now you wish to run this locally
+
+- run command `npm run dev`
+- This will run the app on localhost at port 5000 by default
+- ctrl+click the link in the console to see your website running
+
+## How to make change?
+
+To make high level changes
+
+- Go to ./public/data, there are json files for everything, you can modify them to see changes
+  To make low level changes
+- Go to ./src, this folder contains code for pages
+- Go to ./src/components, this folder contains code for all components organized in folders
+
+## How to deploy on github pages?
+
+Follow these instructions step by step
+
+- Push this code into a github remote repository
+- Go to ./vite.config.js and replace "/semi-dynamic-portfolio/" with "/{your_repo_name}/"
+- Go to ./package.json and replace "homepage": "https://umerbaig123.github.io/semi-dynamic-portfolio/", with "homepage": "https://{your_github_username}.github.io/{your_repo_name}/"
+- Go to ./src/RouteAppend.js and replace export const routeAppend = "/semi-dynamic-portfolio/"; with export const routeAppend = "/{your_repo_name}/";
+- run on terminal npm run deploy, and your portfolio will be hosted on url "https://{your_github_username}.github.io/{your_repo_name}/"
