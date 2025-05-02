@@ -2,8 +2,15 @@ import { useEffect, useState, useContext } from "react";
 import "./Navbar.css";
 import { ThemeContext } from "../../ThemeContextProvider";
 import { routeAppend } from "../../RouteAppend";
+import { Dropdown } from "@mui/base/Dropdown";
+import { MenuButton } from "@mui/base/MenuButton";
+import { Menu } from "@mui/base/Menu";
+import { MenuItem } from "@mui/base/MenuItem";
+import MenuIntroduction from "./NavbarDD";
+
 const Navbar = () => {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
+  const [isMobile, setIsMobile] = useState(false);
   function updateCSSVariables(variables) {
     const root = document.documentElement;
 
@@ -13,7 +20,29 @@ const Navbar = () => {
       root.style.setProperty(cssVarName, value);
     }
   }
+  const links = [
+    { name: "about me", link: routeAppend + "/#/" },
+    { name: "repositories", link: routeAppend + "/#/repositories" },
+    { name: "publications", link: routeAppend + "/#/publications" },
+    { name: "resume", link: routeAppend + "/#/resume" },
+    { name: "teachings", link: routeAppend + "/#/teachings" },
+  ];
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
+    // Set initial state
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   useEffect(() => {
     let key = isDarkMode ? "dark" : "light";
     fetch(routeAppend + "/data/general.json")
@@ -29,23 +58,19 @@ const Navbar = () => {
   }, [isDarkMode]);
   return (
     <div className="topbar">
-      <div className="options" id="navbarList">
-        <a className="btn" href={routeAppend + "/#/"}>
-          about me
-        </a>
-        <a className="btn" href={routeAppend + "/#/repositories"}>
-          repositories
-        </a>
-        <a className="btn" href={routeAppend + "/#/publications"}>
-          publications
-        </a>
-        <a className="btn" href={routeAppend + "/#/resume"}>
-          resume
-        </a>
-        <a className="btn" href={routeAppend + "/#/teachings"}>
-          teachings
-        </a>
-      </div>
+      {isMobile ? (
+        <>
+          <MenuIntroduction links={links} />
+        </>
+      ) : (
+        <div className="options" id="navbarList">
+          {links.map((link) => (
+            <a className="btn" href={link.link} key={link.name}>
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )}
       <label className="switch">
         <input
           type="checkbox"

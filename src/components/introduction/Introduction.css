@@ -1,9 +1,10 @@
 .container {
-  margin-top: 15vh;
   width: 93vw;
   display: flex;
   color: var(--text-color);
   user-select: none;
+  margin: 0 auto;
+  margin-top: 15vh;
 }
 .profile-container {
   display: flex;
@@ -121,4 +122,18 @@
   text-align: justify;
   letter-spacing: 1px;
   margin: 0px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .profile-container,
+  .intro {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .picture-container {
+    margin: 0 auto;
+  }
 }
