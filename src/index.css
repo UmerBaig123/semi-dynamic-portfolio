@@ -5,13 +5,14 @@ html {
 }
 html {
   width: 100%;
+}
+:root {
   --background-color: #141414;
   --text-color: #ffffff;
   --news-hover-color: #ffffff83;
   --news-hover-back-color: #ffffff25;
   --navbar-bg: #1e1e1e;
 }
-
 body {
   margin: 0;
   padding: 0;
