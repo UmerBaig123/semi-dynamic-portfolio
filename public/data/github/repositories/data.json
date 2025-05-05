@@ -1,1 +1,9 @@
-["zillowScraper", "portfolio", "TeacherDataScraper"]
+[
+  "zillowScraper",
+  "portfolio",
+  "TeacherDataScraper",
+  "openAI-selenium-bot",
+  "deep-live-cam",
+  "movieStreaming",
+  "3kcars_app"
+]
