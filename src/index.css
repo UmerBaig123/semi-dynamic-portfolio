@@ -12,6 +12,7 @@ html {
   --news-hover-color: #ffffff83;
   --news-hover-back-color: #ffffff25;
   --navbar-bg: #1e1e1e;
+  --line-color: #ffffff3f;
 }
 body {
   margin: 0;
@@ -30,7 +31,7 @@ body {
   max-width: 95vw;
   margin: 0 auto;
   margin-top: 30px;
-  border-top: 1px solid #ffffff3f;
+  border-top: 1px solid var(--line-color);
   width: 100%;
 }
 .heading {

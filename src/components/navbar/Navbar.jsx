@@ -2,10 +2,6 @@ import { useEffect, useState, useContext } from "react";
 import "./Navbar.css";
 import { ThemeContext } from "../../ThemeContextProvider";
 import { routeAppend } from "../../RouteAppend";
-import { Dropdown } from "@mui/base/Dropdown";
-import { MenuButton } from "@mui/base/MenuButton";
-import { Menu } from "@mui/base/Menu";
-import { MenuItem } from "@mui/base/MenuItem";
 import MenuIntroduction from "./NavbarDD";
 
 const Navbar = () => {
@@ -26,6 +22,7 @@ const Navbar = () => {
     { name: "publications", link: routeAppend + "/#/publications" },
     { name: "resume", link: routeAppend + "/#/resume" },
     { name: "teachings", link: routeAppend + "/#/teachings" },
+    { name: "contact", link: routeAppend + "/#/contact" },
   ];
   useEffect(() => {
     const handleResize = () => {

@@ -46,7 +46,7 @@ const TeachingsPage = () => {
           style={{
             paddingBottom: "50px",
             width: "100%",
-            borderBottom: "1px solid rgba(255, 255, 255, 0.26)",
+            borderBottom: "1px solid var(--line-color)",
             marginBottom: "10px",
           }}
         >
