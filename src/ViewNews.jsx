@@ -51,11 +51,12 @@ const ViewNews = () => {
         >
           File
         </div>
-        <div className="header">
+        <div className="header news-pdf-iframe-container">
           <iframe
+            className="news-pdf-iframe"
             src={routeAppend + news.pdf}
             width="100%"
-            height="565px"
+            height="665px"
             frameBorder="0"
           ></iframe>
         </div>

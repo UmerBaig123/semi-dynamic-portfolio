@@ -34,3 +34,6 @@
   text-align: justify;
   color: var(--text-color);
 }
+.news-pdf-iframe-container {
+  margin-bottom: 50px;
+}
