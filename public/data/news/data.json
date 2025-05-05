@@ -9,9 +9,10 @@
   },
   {
     "id": 1,
-    "title": "Second Workshop on Quality and Reliability Assessment of Robotic Software Architectures and Components @ ICRA 2023",
-    "date": "June 2, 2023 - 1 year, 10 months ago",
-    "description": "Presented my research on ROSSMARie in the QRARSAC workshop at ICRA 2023. The session focused on advancing software reliability in robotics, with discussions on enhancing intelligent robotic systems through innovative software solutions.",
-    "image": "/QRARSAC23_ROSSMARie_Rizwan.pdf"
+    "title": "Participated in CodeRush 2025 Hackathon",
+    "date": "May 2, 2025 - ITU Lahore",
+    "description": "Made a significant contribution to the CodeRush 2025 Hackathon, where I collaborated with a team to develop an innovative solution for a real-world problem. The event fostered creativity and teamwork, and we were proud to showcase our project.",
+    "image": "/coderush.PNG",
+    "pdf": "/Coderush25_WebHackathon.pdf"
   }
 ]
