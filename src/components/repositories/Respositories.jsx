@@ -41,7 +41,7 @@ const Repositories = ({ isMain }) => {
             ? {
                 paddingBottom: "50px",
                 width: "95%",
-                borderBottom: "1px solid rgba(255, 255, 255, 0.26)",
+                borderBottom: "1px solid var(--line-color)",
                 marginBottom: "10px",
               }
             : {}
