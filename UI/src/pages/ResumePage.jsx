@@ -1,6 +1,6 @@
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
 import "./ResumePage.css";
-import { routeAppend } from "./RouteAppend";
+import { routeAppend } from "../context/RouteAppend";
 const ResumePage = () => {
   return (
     <div className="resume-container">

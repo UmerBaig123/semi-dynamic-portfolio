@@ -1,5 +1,5 @@
-import Navbar from "./components/navbar/Navbar";
-import Repositories from "./components/repositories/Respositories";
+import Navbar from "../components/navbar/Navbar";
+import Repositories from "../components/repositories/Respositories";
 import "./ReposPage.css";
 const ReposPage = () => {
   return (

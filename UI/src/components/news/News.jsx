@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NewsCard from "../cards/news/NewsCard";
 import "./News.css";
-import { routeAppend } from "../../RouteAppend";
+import { routeAppend } from "../../context/RouteAppend";
 const News = ({ isMain }) => {
   const [news, setNews] = useState([]);
   useEffect(() => {

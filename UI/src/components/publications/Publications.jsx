@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PublicationCard from "../cards/publication/PublicationCard";
-import { routeAppend } from "../../RouteAppend";
+import { routeAppend } from "../../context/RouteAppend";
 const Publications = ({ isMain }) => {
   const [publications, setPublications] = useState([]);
   useEffect(() => {

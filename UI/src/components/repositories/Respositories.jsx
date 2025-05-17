@@ -1,7 +1,7 @@
 import { useState } from "react";
 import GithubCard from "../cards/github/GithubCard";
 import { useEffect } from "react";
-import { routeAppend } from "../../RouteAppend";
+import { routeAppend } from "../../context/RouteAppend";
 const Repositories = ({ isMain }) => {
   const [githubUsername, setGithubUsername] = useState("");
   const [githubRepoNames, setGithubRepoNames] = useState([]);

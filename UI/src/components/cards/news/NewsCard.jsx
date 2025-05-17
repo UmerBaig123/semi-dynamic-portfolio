@@ -1,5 +1,5 @@
 import "./NewsCard.css";
-import { routeAppend } from "../../../RouteAppend";
+import { routeAppend } from "../../../context/RouteAppend";
 const NewsCard = ({ news }) => {
   return (
     <a

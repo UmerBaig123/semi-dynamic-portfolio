@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { LinearProgress, Typography, Box, Stack } from "@mui/material";
-import { ThemeContext } from "../../ThemeContextProvider";
+import { ThemeContext } from "../../context/ThemeContextProvider";
 
 const Skills = ({ skills }) => {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);

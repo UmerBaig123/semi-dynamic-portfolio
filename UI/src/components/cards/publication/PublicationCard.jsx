@@ -1,5 +1,5 @@
 import "./PublicationCard.css";
-import { routeAppend } from "../../../RouteAppend";
+import { routeAppend } from "../../../context/RouteAppend";
 const PublicationCard = ({ publication }) => {
   return (
     <div className="pCard paralell publ">

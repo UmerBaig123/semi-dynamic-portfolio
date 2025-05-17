@@ -9,7 +9,7 @@ import { CssTransition } from "@mui/base/Transitions";
 import { PopupContext } from "@mui/base/Unstable_Popup";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { ThemeContext } from "../../ThemeContextProvider";
+import { ThemeContext } from "../../context/ThemeContextProvider";
 import { useEffect, useState, useContext } from "react";
 export default function MenuIntroduction({ links }) {
   const { isDarkMode, setIsDarkmode } = useContext(ThemeContext);

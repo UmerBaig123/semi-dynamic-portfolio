@@ -1,11 +1,11 @@
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
 import { AllCommunityModule, ModuleRegistry } from "ag-grid-community";
 import { AgGridReact } from "ag-grid-react";
 import { useContext, useEffect, useState } from "react";
 import { themeBalham } from "ag-grid-community";
 import "./TeachingsPage.css";
-import { routeAppend } from "./RouteAppend";
-import { ThemeContext } from "./ThemeContextProvider";
+import { routeAppend } from "../context/RouteAppend";
+import { ThemeContext } from "../context/ThemeContextProvider";
 ModuleRegistry.registerModules([AllCommunityModule]);
 const TeachingsPage = () => {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);

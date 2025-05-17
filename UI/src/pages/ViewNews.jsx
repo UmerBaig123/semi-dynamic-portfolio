@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
 import { useEffect, useState } from "react";
 import "./ViewNews.css";
-import { routeAppend } from "./RouteAppend";
+import { routeAppend } from "../context/RouteAppend";
 const ViewNews = () => {
   const { news_id } = useParams();
   const [news, setNews] = useState(null);

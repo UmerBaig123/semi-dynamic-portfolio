@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import "./Navbar.css";
-import { ThemeContext } from "../../ThemeContextProvider";
-import { routeAppend } from "../../RouteAppend";
+import { ThemeContext } from "../../context/ThemeContextProvider";
+import { routeAppend } from "../../context/RouteAppend";
 import MenuIntroduction from "./NavbarDD";
 
 const Navbar = () => {

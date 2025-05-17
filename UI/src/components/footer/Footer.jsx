@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Box, Typography, Link, Container, Stack } from "@mui/material";
-import { ThemeContext } from "../../ThemeContextProvider";
+import { ThemeContext } from "../../context/ThemeContextProvider";
 
 const Footer = () => {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);

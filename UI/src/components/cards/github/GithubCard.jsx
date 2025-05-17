@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../../ThemeContextProvider";
+import { ThemeContext } from "../../../context/ThemeContextProvider";
 
 const GithubCard = ({ username, repoName }) => {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
