@@ -11,19 +11,26 @@ import ReposPage from "./ReposPage.jsx";
 import { ThemeProvider } from "./ThemeContextProvider.jsx";
 import ViewNews from "./ViewNews.jsx";
 import ContactPage from "./ContactPage.jsx";
+import Navbar from "./components/navbar/Navbar.jsx";
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<AboutPage />} />
+      <Route path="/publications" element={<PublicationsPage />} />
+      <Route path="/resume" element={<ResumePage />} />
+      <Route path="/teachings" element={<TeachingsPage />} />
+      <Route path="/repositories" element={<ReposPage />} />
+      <Route path="/viewNews/:news_id" element={<ViewNews />} />
+      <Route path="/contact" element={<ContactPage />} />
+    </Routes>
+  );
+}
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
     <HashRouter>
-      <Routes>
-        <Route path="/" element={<AboutPage />} />
-        <Route path="/publications" element={<PublicationsPage />} />
-        <Route path="/resume" element={<ResumePage />} />
-        <Route path="/teachings" element={<TeachingsPage />} />
-        <Route path="/repositories" element={<ReposPage />} />
-        <Route path="/viewNews/:news_id" element={<ViewNews />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
+      <Navbar />
+      <App />
     </HashRouter>
   </ThemeProvider>
 );

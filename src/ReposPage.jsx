@@ -5,7 +5,6 @@ const ReposPage = () => {
   return (
     <>
       {" "}
-      <Navbar />
       <div className="container">
         <Repositories isMain={false} />
       </div>

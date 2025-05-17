@@ -39,7 +39,6 @@ const TeachingsPage = () => {
   }, []);
   return (
     <div className="container">
-      <Navbar />
       <div className="item-box" style={{ borderTop: "none" }}>
         <div
           className="heading"

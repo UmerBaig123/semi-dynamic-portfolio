@@ -28,7 +28,6 @@ const ContactPage = () => {
 
   return (
     <>
-      <Navbar />
       <div className="container contact-container">
         <h1>Contact Us</h1>
         <form onSubmit={formik.handleSubmit}>

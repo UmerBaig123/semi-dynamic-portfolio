@@ -5,7 +5,6 @@ import Publications from "./components/publications/Publications";
 const PublicationsPage = () => {
   return (
     <>
-      <Navbar />
       <div className="container">
         <Publications isMain={false} />
       </div>

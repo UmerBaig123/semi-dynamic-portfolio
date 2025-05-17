@@ -26,7 +26,6 @@ const ViewNews = () => {
   return (
     <>
       <div style={{ maxWidth: "90vw" }}>
-        <Navbar />
         <div className="container">
           <div className="title">{news.title}</div>
         </div>

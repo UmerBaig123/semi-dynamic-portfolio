@@ -13,8 +13,6 @@ import Footer from "./components/footer/Footer";
 function AboutPage() {
   return (
     <>
-      <Navbar />
-      {/* <SideNav /> */}
       <Introduction />
       <Publications isMain={true} />
       <News isMain={true} />

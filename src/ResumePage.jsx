@@ -4,7 +4,6 @@ import { routeAppend } from "./RouteAppend";
 const ResumePage = () => {
   return (
     <div className="resume-container">
-      <Navbar />
       <iframe
         src={routeAppend + "/resume.pdf"}
         className="resume-frame"
