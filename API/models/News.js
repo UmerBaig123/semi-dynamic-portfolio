@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const publicationsSchema = new mongoose.Schema({
+const newsSchema = new mongoose.Schema({
   title: { type: String, unique: true },
   description: String,
   pdfUrl: String,
@@ -8,4 +8,4 @@ const publicationsSchema = new mongoose.Schema({
   timeline: String,
 });
 
-export const Publications = mongoose.model("Publications", publicationsSchema);
+export const News = mongoose.model("News", newsSchema);
