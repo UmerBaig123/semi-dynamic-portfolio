@@ -12,7 +12,11 @@ import { ThemeProvider } from "./context/ThemeContextProvider.jsx";
 import ViewNews from "./pages/ViewNews.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
-function App() {
+import LoginPage from "./pages/LoginPage.jsx";
+import RegisterPage from "./pages/RegisterPage.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
+import SecuredRoute from "./components/securedRoute/SecuredRoute.jsx";
+function PublicRoutes() {
   return (
     <Routes>
       <Route path="/" element={<AboutPage />} />
@@ -25,12 +29,40 @@ function App() {
     </Routes>
   );
 }
-
+function PrivateRoutes() {
+  return (
+    <>
+      <Routes>
+        <Route element={<SecuredRoute />}>
+          <Route path="/admin" element={<AboutPage />} />
+          <Route path="/admin/about" element={<AboutPage />} />
+          <Route path="/admin/repositories" element={<ReposPage />} />
+          <Route path="/admin/teachings" element={<TeachingsPage />} />
+          <Route path="/admin/publications" element={<PublicationsPage />} />
+          <Route path="/admin/resume" element={<ResumePage />} />
+          <Route path="/admin/viewNews/:news_id" element={<ViewNews />} />
+        </Route>
+      </Routes>
+    </>
+  );
+}
+function AuthRoutes() {
+  return (
+    <Routes>
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+    </Routes>
+  );
+}
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
-    <HashRouter>
-      <Navbar />
-      <App />
-    </HashRouter>
+    <AuthProvider>
+      <HashRouter>
+        <Navbar />
+        <PublicRoutes />
+        <PrivateRoutes />
+        <AuthRoutes />
+      </HashRouter>
+    </AuthProvider>
   </ThemeProvider>
 );

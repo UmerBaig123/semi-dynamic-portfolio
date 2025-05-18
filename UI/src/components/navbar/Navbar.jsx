@@ -7,6 +7,7 @@ import MenuIntroduction from "./NavbarDD";
 const Navbar = () => {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
   const [isMobile, setIsMobile] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   function updateCSSVariables(variables) {
     const root = document.documentElement;
 
@@ -28,7 +29,14 @@ const Navbar = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
+    const switchUrl = () => {
+      const url = window.location.href;
+      const visibility =
+        !url.includes("#/login") && !url.includes("#/register");
+      setIsVisible(visibility);
+    };
+    switchUrl();
+    window.addEventListener("hashchange", switchUrl);
     // Set initial state
     handleResize();
 
@@ -53,6 +61,10 @@ const Navbar = () => {
       });
     const checkbox = document.getElementById("checkbox");
   }, [isDarkMode]);
+
+  if (!isVisible) {
+    return <></>;
+  }
   return (
     <div className="topbar">
       {isMobile ? (
