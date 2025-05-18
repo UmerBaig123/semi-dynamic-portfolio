@@ -2,11 +2,11 @@
 
 ## How to set up and run?
 
-To set up you firt need to clone this repo
+To set up you first need to clone this repo
 
 - run `git clone https://github.com/UmerBaig123/semi-dynamic-portfolio.git`
-  Now install dependencies
-- run `npm install`
+  Then to run, I have made a simple batch script named run_project.bat that will setup and run the project
+- run `run_project`
 
 ## How to run locally?
 

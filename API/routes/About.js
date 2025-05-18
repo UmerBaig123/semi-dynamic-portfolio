@@ -11,8 +11,6 @@ const router = express.Router();
 
 router.post("/", createAbout);
 router.get("/", getAbouts);
-router.get("/:id", getAboutById);
-router.put("/:id", updateAbout);
-router.delete("/:id", deleteAbout);
+router.delete("/", deleteAbout);
 
 export default router;
