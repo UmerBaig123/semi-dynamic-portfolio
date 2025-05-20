@@ -22,7 +22,7 @@ const Publications = ({ isMain }) => {
   }
   return (
     <div className="item-box" style={!isMain ? { borderTop: "none" } : {}}>
-      <a href={isMain ? "/publications/" : "#"}>
+      <a href={isMain ? "/#/publications/" : "#"}>
         <div
           className="heading"
           style={

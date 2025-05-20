@@ -3,16 +3,15 @@ import { useState, useEffect } from "react";
 import DOMPurify from "dompurify";
 import { routeAppend } from "../../context/RouteAppend";
 import { getAbout, createAbout } from "../../api/About";
+import Alert from "../alert/Alert";
 const EditIntroduction = () => {
+  const [success, setSuccess] = useState(false);
   const [userdata, setUserdata] = useState({});
   useEffect(() => {
     getAbout().then((res) => {
       setUserdata(res);
     });
   }, []);
-  const sanitizedData = () => ({
-    __html: userdata?.summary,
-  });
 
   return (
     <div>
@@ -167,6 +166,7 @@ const EditIntroduction = () => {
             // You can replace this with your actual submit logic
             console.log("Submitted data:", userdata);
             createAbout(userdata);
+            setSuccess(true);
           }}
           style={{
             padding: "10px 24px",
@@ -181,6 +181,21 @@ const EditIntroduction = () => {
         >
           Submit
         </button>
+      </div>
+      <div
+        style={{
+          display: "grid",
+          placeContent: "center",
+          width: "100%",
+          margin: "20px",
+        }}
+      >
+        <Alert
+          type={"constructive"}
+          message={"successfully submitted"}
+          isOpen={success}
+          setIsOpen={setSuccess}
+        />
       </div>
     </div>
   );

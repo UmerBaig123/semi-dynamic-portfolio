@@ -18,7 +18,7 @@ const Navbar = ({ isAdmin }) => {
       root.style.setProperty(cssVarName, value);
     }
   }
-  const links = [
+  const normal_links = [
     { name: "about me", link: routeAppend + "/#/" },
     { name: "repositories", link: routeAppend + "/#/repositories" },
     { name: "publications", link: routeAppend + "/#/publications" },
@@ -26,12 +26,25 @@ const Navbar = ({ isAdmin }) => {
     { name: "teachings", link: routeAppend + "/#/teachings" },
     { name: "contact", link: routeAppend + "/#/contact" },
   ];
+  const admin_links = [
+    { name: "about me", link: routeAppend + "/#/admin/" },
+    { name: "repositories", link: routeAppend + "/#/admin/repositories" },
+    { name: "publications", link: routeAppend + "/#/admin/publications" },
+    { name: "resume", link: routeAppend + "/#/admin/resume" },
+    { name: "teachings", link: routeAppend + "/#/admin/teachings" },
+    { name: "contact", link: routeAppend + "/#/admin/contact" },
+  ];
+  const [links, setLinks] = useState(normal_links);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
     handleResize();
-
+    if (isAdmin) {
+      setLinks(admin_links);
+    } else {
+      setLinks(normal_links);
+    }
     window.addEventListener("resize", handleResize);
 
     // Cleanup event listener on component unmount
