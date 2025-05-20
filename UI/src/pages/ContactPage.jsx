@@ -28,6 +28,7 @@ const ContactPage = () => {
 
   return (
     <>
+      <Navbar isAdmin={false} />
       <div className="container contact-container">
         <h1>Contact Us</h1>
         <form onSubmit={formik.handleSubmit}>

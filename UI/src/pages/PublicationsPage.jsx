@@ -5,6 +5,7 @@ import Publications from "../components/publications/Publications";
 const PublicationsPage = () => {
   return (
     <>
+      <Navbar isAdmin={false} />
       <div className="container">
         <Publications isMain={false} />
       </div>

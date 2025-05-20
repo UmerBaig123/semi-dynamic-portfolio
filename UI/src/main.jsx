@@ -59,7 +59,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
     <AuthProvider>
       <HashRouter>
-        <Navbar />
         <PublicRoutes />
         <PrivateRoutes />
         <AuthRoutes />

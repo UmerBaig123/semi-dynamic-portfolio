@@ -39,6 +39,7 @@ const TeachingsPage = () => {
   }, []);
   return (
     <div className="container">
+      <Navbar isAdmin={false} />
       <div className="item-box" style={{ borderTop: "none" }}>
         <div
           className="heading"

@@ -5,9 +5,11 @@ import News from "../components/news/News";
 import Repositories from "../components/repositories/Respositories";
 import Skills from "../components/skills/Skills";
 import Footer from "../components/footer/Footer";
+import Navbar from "../components/navbar/Navbar";
 function AboutPage() {
   return (
     <>
+      <Navbar isAdmin={false} />
       <Introduction />
       <Publications isMain={true} />
       <News isMain={true} />

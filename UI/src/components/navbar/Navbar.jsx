@@ -3,11 +3,12 @@ import "./Navbar.css";
 import { ThemeContext } from "../../context/ThemeContextProvider";
 import { routeAppend } from "../../context/RouteAppend";
 import MenuIntroduction from "./NavbarDD";
+import { useAuth } from "../../context/AuthContext";
 
-const Navbar = () => {
+const Navbar = ({ isAdmin }) => {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
   const [isMobile, setIsMobile] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
+  const { logout } = useAuth();
   function updateCSSVariables(variables) {
     const root = document.documentElement;
 
@@ -29,18 +30,8 @@ const Navbar = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    const switchUrl = () => {
-      const url = window.location.href;
-      const visibility =
-        !url.includes("#/login") && !url.includes("#/register");
-      setIsVisible(visibility);
-    };
-    switchUrl();
-    window.addEventListener("hashchange", switchUrl);
-    // Set initial state
     handleResize();
 
-    // Add event listener
     window.addEventListener("resize", handleResize);
 
     // Cleanup event listener on component unmount
@@ -62,9 +53,6 @@ const Navbar = () => {
     const checkbox = document.getElementById("checkbox");
   }, [isDarkMode]);
 
-  if (!isVisible) {
-    return <></>;
-  }
   return (
     <div className="topbar">
       {isMobile ? (
@@ -80,14 +68,30 @@ const Navbar = () => {
           ))}
         </div>
       )}
-      <label className="switch">
-        <input
-          type="checkbox"
-          id="checkbox"
-          onChange={() => setIsDarkMode((mode) => !mode)}
-        />
-        <span className="slider"></span>
-      </label>
+      <div className="switch-container">
+        {isAdmin ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-power"
+            viewBox="0 0 16 16"
+            onClick={logout}
+          >
+            <path d="M7.5 1v7h1V1z" />
+            <path d="M3 8.812a5 5 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812" />
+          </svg>
+        ) : null}
+        <label className="switch">
+          <input
+            type="checkbox"
+            id="checkbox"
+            onChange={() => setIsDarkMode((mode) => !mode)}
+          />
+          <span className="slider"></span>
+        </label>
+      </div>
     </div>
   );
 };

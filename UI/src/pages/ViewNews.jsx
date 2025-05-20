@@ -25,6 +25,7 @@ const ViewNews = () => {
   }
   return (
     <>
+      <Navbar isAdmin={false} />
       <div style={{ maxWidth: "90vw" }}>
         <div className="container">
           <div className="title">{news.title}</div>

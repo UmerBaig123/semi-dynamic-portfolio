@@ -4,7 +4,7 @@ import "./ReposPage.css";
 const ReposPage = () => {
   return (
     <>
-      {" "}
+      <Navbar isAdmin={false} />{" "}
       <div className="container">
         <Repositories isMain={false} />
       </div>

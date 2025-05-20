@@ -1,12 +1,13 @@
 import mongoose from "mongoose";
 
 const aboutSchema = new mongoose.Schema({
-  fullName: String,
+  first_name: String,
+  last_name: String,
   linkedIn: String,
-  githubUrl: String,
+  github: String,
   email: String,
   qualification: String,
-  bio: String,
+  summary: String,
   profilePic: String,
 });
 
