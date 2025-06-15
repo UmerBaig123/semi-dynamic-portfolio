@@ -7,6 +7,7 @@ import Alert from "../alert/Alert";
 const EditIntroduction = () => {
   const [success, setSuccess] = useState(false);
   const [userdata, setUserdata] = useState({});
+  const [skills, setSkills] = useState([]);
   useEffect(() => {
     getAbout().then((res) => {
       setUserdata(res);

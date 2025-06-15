@@ -17,6 +17,8 @@ import RegisterPage from "./pages/RegisterPage.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import SecuredRoute from "./components/securedRoute/SecuredRoute.jsx";
 import AboutEdit from "./pages/AboutEdit.jsx";
+import EditRepos from "./pages/EditRepos.jsx";
+import EditResume from "./pages/EditResume.jsx";
 function PublicRoutes() {
   return (
     <Routes>
@@ -36,11 +38,10 @@ function PrivateRoutes() {
       <Routes>
         <Route element={<SecuredRoute />}>
           <Route path="/admin" element={<AboutEdit />} />
-          <Route path="/admin/about" element={<AboutPage />} />
-          <Route path="/admin/repositories" element={<ReposPage />} />
+          <Route path="/admin/repositories" element={<EditRepos />} />
           <Route path="/admin/teachings" element={<TeachingsPage />} />
           <Route path="/admin/publications" element={<PublicationsPage />} />
-          <Route path="/admin/resume" element={<ResumePage />} />
+          <Route path="/admin/resume" element={<EditResume />} />
           <Route path="/admin/viewNews/:news_id" element={<ViewNews />} />
         </Route>
       </Routes>

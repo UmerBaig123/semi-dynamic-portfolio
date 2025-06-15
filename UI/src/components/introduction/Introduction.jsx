@@ -7,6 +7,8 @@ const Introduction = () => {
   const [userdata, setUserdata] = useState({});
   useEffect(() => {
     getAbout().then((res) => {
+      console.log("User data fetched:", res);
+      // Ensure the response is an object and has the expected properties
       setUserdata(res);
     });
   }, []);

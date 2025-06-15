@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 const skillSchema = new mongoose.Schema({
-  skillName: { type: String, unique: true },
-  progress: { type: Number, unique: true },
+  skill_name: { type: String, unique: true },
+  skill_progress: { type: Number, default: 1 },
 });
 
 export const Skills = mongoose.model("Skills", skillSchema);

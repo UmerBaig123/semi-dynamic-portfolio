@@ -7,3 +7,47 @@
   height: 88vh;
   width: 100vw;
 }
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-resume {
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+.edit-resume-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.file-input {
+  padding: 12px;
+  border: 2px solid #7d7d7d4e;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.upload-button {
+  padding: 12px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #1565c0;
+}

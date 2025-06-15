@@ -1,10 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
 import { LinearProgress, Typography, Box, Stack } from "@mui/material";
 import { ThemeContext } from "../../context/ThemeContextProvider";
-
-const Skills = ({ skills }) => {
+import { getSkills } from "../../api/Skills";
+const Skills = () => {
+  const [skills, setSkills] = useState([]);
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
   const [progressColors, setProgressColors] = useState({});
+  useEffect(() => {
+    const fetchSkills = async () => {
+      const skillsData = await getSkills();
+      setSkills(skillsData);
+    };
+    fetchSkills();
+  }, []);
   useEffect(() => {
     const progressColors = {
       light: {
