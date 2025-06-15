@@ -5,6 +5,7 @@ import aboutRoutes from "./routes/About.js";
 import skillRoutes from "./routes/Skills.js";
 import teachingRoutes from "./routes/Teachings.js";
 import resumeRoutes from "./routes/Resume.js";
+import PublicationRoutes from "./routes/Publications.js";
 import cors from "cors";
 const app = express();
 app.use(bodyParser.json());
@@ -14,4 +15,5 @@ app.use("/api/about", aboutRoutes);
 app.use("/api/resume", resumeRoutes);
 app.use("/api/skills", skillRoutes);
 app.use("/api/teachings", teachingRoutes);
+app.use("/api/publications", PublicationRoutes); // e.g. /api/publications
 export default app;

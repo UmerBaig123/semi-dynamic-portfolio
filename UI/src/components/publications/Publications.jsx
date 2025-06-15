@@ -1,21 +1,15 @@
 import { useEffect, useState } from "react";
 import PublicationCard from "../cards/publication/PublicationCard";
 import { routeAppend } from "../../context/RouteAppend";
+import { getPublications } from "../../api/Publications";
 const Publications = ({ isMain }) => {
   const [publications, setPublications] = useState([]);
   useEffect(() => {
-    let url = "/data/publications/data.json";
-    if (isMain) {
-      url = "/data/publications/main/data.json";
-    }
-    fetch(routeAppend + url)
-      .then((response) => response.json())
-      .then((data) => {
-        setPublications(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching publications:", error);
-      });
+    const fetchPublications = async () => {
+      const data = await getPublications();
+      setPublications(data);
+    };
+    fetchPublications();
   }, []);
   if (publications.length === 0) {
     return <div className="loading">Loading...</div>;

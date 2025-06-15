@@ -1,4 +1,4 @@
-import { Skills } from "../models/SkillsModel.js";
+import { Skills } from "../models/Skills.js";
 
 // Create a new skill
 export const createSkill = async (req, res) => {

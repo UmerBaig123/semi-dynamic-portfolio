@@ -43,6 +43,7 @@
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 10px;
+  min-width: 80vw;
   width: 100%;
 }
 .pAuthors {
@@ -74,4 +75,13 @@
 }
 .link:hover {
   background-color: #6b6b6b25;
+}
+.p-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
