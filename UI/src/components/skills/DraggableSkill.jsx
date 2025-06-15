@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Box, Typography, LinearProgress } from "@mui/material";
-import { deleteSkill } from "../../../../API/controllers/SkillsController";
 
 const SkillProgress = ({
   skill,

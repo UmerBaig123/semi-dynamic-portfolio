@@ -1,16 +1,16 @@
 import React from "react";
 import Navbar from "../components/navbar/Navbar";
-import Publications from "../components/publications/Publications";
+import EditPublications from "../components/publications/EditPublications";
 
-const PublicationsPage = () => {
+const EditPublicationsPage = () => {
   return (
     <>
       <Navbar isAdmin={false} />
       <div className="container">
-        <Publications isMain={false} />
+        <EditPublications isMain={false} />
       </div>
     </>
   );
 };
 
-export default PublicationsPage;
+export default EditPublicationsPage;

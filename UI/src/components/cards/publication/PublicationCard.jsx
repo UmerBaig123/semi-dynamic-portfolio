@@ -9,13 +9,9 @@ const PublicationCard = ({ publication }) => {
         <div className="pInfo">
           <div className="pTitle">{publication.title}</div>
           <div className="pAuthors">{publication.authors}</div>
-          <div className="publicationDesc">{publication.desc}</div>
+          <div className="publicationDesc">{publication.description}</div>
           <div className="links">
-            <a
-              className="link"
-              href={routeAppend + publication.pdf_link}
-              target="_blank"
-            >
+            <a className="link" href={publication.pdfUrl} target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"

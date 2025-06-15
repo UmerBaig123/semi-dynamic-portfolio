@@ -19,6 +19,7 @@ import SecuredRoute from "./components/securedRoute/SecuredRoute.jsx";
 import AboutEdit from "./pages/AboutEdit.jsx";
 import EditRepos from "./pages/EditRepos.jsx";
 import EditResume from "./pages/EditResume.jsx";
+import EditPublicationsPage from "./pages/EditPublications.jsx";
 function PublicRoutes() {
   return (
     <Routes>
@@ -40,7 +41,10 @@ function PrivateRoutes() {
           <Route path="/admin" element={<AboutEdit />} />
           <Route path="/admin/repositories" element={<EditRepos />} />
           <Route path="/admin/teachings" element={<TeachingsPage />} />
-          <Route path="/admin/publications" element={<PublicationsPage />} />
+          <Route
+            path="/admin/publications"
+            element={<EditPublicationsPage />}
+          />
           <Route path="/admin/resume" element={<EditResume />} />
           <Route path="/admin/viewNews/:news_id" element={<ViewNews />} />
         </Route>

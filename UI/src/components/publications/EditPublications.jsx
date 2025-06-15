@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PublicationCard from "../cards/publication/PublicationCard";
 import { routeAppend } from "../../context/RouteAppend";
+import "./EditPubs.css";
 const EditPublications = ({ isMain }) => {
   const [publications, setPublications] = useState([]);
   useEffect(() => {
@@ -49,7 +50,9 @@ const EditPublications = ({ isMain }) => {
       >
         <div id="publications">
           {publications.map((publication, index) => (
-            <PublicationCard key={index} publication={publication} />
+            <div className="publicationDelete">
+              <PublicationCard key={index} publication={publication} />
+            </div>
           ))}
         </div>
       </div>
