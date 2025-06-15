@@ -28,11 +28,8 @@ const Navbar = ({ isAdmin }) => {
   ];
   const admin_links = [
     { name: "about me", link: routeAppend + "/#/admin/" },
-    { name: "repositories", link: routeAppend + "/#/admin/repositories" },
     { name: "publications", link: routeAppend + "/#/admin/publications" },
     { name: "resume", link: routeAppend + "/#/admin/resume" },
-    { name: "teachings", link: routeAppend + "/#/admin/teachings" },
-    { name: "contact", link: routeAppend + "/#/admin/contact" },
   ];
   const [links, setLinks] = useState(normal_links);
   useEffect(() => {
