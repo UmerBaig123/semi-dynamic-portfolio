@@ -4,7 +4,7 @@ import "./ReposPage.css";
 const EditRepos = () => {
   return (
     <>
-      <Navbar isAdmin={false} />{" "}
+      <Navbar isAdmin={true} />{" "}
       <div className="container">
         <Repositories isMain={false} />
       </div>

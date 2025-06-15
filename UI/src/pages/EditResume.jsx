@@ -16,7 +16,7 @@ const EditResume = () => {
   };
   return (
     <>
-      <Navbar isAdmin={false} />
+      <Navbar isAdmin={true} />
       <div
         className="resume-container edit-resume"
         style={{ marginTop: "100px" }}

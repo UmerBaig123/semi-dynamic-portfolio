@@ -5,7 +5,7 @@ import EditPublications from "../components/publications/EditPublications";
 const EditPublicationsPage = () => {
   return (
     <>
-      <Navbar isAdmin={false} />
+      <Navbar isAdmin={true} />
       <div className="container">
         <EditPublications isMain={false} />
       </div>
